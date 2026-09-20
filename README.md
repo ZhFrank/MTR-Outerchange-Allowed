@@ -1,4 +1,4 @@
-# MTR-Outerchange-Allowed
+# [MTR-Outerchange-Allowed](https://modrinth.com/mod/mtr-outerchange-allowed)
 An addon for the [Minecraft Transit Railway](https://modrinth.com/mod/minecraft-transit-railway) mod that allows outerchanges through ticket barriers.
 [我的世界铁路](https://modrinth.com/mod/minecraft-transit-railway)的附属模组，允许玩家通过闸机进行出站换乘。
 
