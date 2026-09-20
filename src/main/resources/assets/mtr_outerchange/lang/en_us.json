@@ -1,0 +1,12 @@
+{
+  "screen.mtr_outerchange.title": "Ticket Barrier (Exit) - Outerchange",
+  "screen.mtr_outerchange.allow": "Allow outerchange: ",
+  "screen.mtr_outerchange.yes": "Yes",
+  "screen.mtr_outerchange.no": "No",
+  "screen.mtr_outerchange.minutes": "Max time outside paid area: %s min",
+  "screen.mtr_outerchange.done": "Done",
+  "message.mtr_outerchange.saved": "[Outerchange] Exit barrier saved. Time limit outside the paid area: %s minute(s).",
+  "message.mtr_outerchange.pass_entrance": "[Outerchange] Entry record kept, you pass straight through and your journey continues.",
+  "message.mtr_outerchange.exit": "[Outerchange] Journey paused, please enter again within %1$s min. No fare deducted yet, balance: %2$s.",
+  "message.mtr_outerchange.expired": "[Outerchange] You did not enter again in time. Fare %1$s deducted for your journey ending at %2$s. Balance: %3$s."
+}

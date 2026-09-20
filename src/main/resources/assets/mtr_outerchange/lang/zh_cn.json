@@ -1,0 +1,12 @@
+{
+  "screen.mtr_outerchange.title": "出站闸机 - 出站换乘",
+  "screen.mtr_outerchange.allow": "允许出站换乘：",
+  "screen.mtr_outerchange.yes": "是",
+  "screen.mtr_outerchange.no": "否",
+  "screen.mtr_outerchange.minutes": "付费区外最长逗留时间：%s 分钟",
+  "screen.mtr_outerchange.done": "完成",
+  "message.mtr_outerchange.saved": "[出站换乘] 出站闸机设置已保存，付费区外最长逗留时间：%s 分钟。",
+  "message.mtr_outerchange.pass_entrance": "[出站换乘] 已保留原进站记录，直接放行，本次行程继续。",
+  "message.mtr_outerchange.exit": "[出站换乘] 行程已暂停，请在 %1$s 分钟内重新进站。本次暂不扣费，当前余额：%2$s。",
+  "message.mtr_outerchange.expired": "[出站换乘] 超时未进站，已扣除本次行程（终点：%2$s）车费 %1$s，当前余额：%3$s。"
+}

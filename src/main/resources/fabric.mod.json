@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mtr_outerchange",
+  "version": "${version}",
+  "name": "MTR Outerchange Allowed",
+  "description": "An addon for the Minecraft Transit Railway mod: allows outerchanges through ticket barriers (Original MTR version).",
+  "authors": [
+    "ZFrankXin",
+    "WorkBuddy"
+  ],
+  "license": "MIT",
+  "icon": "assets/mtr_outerchange/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.mtroa.MtrOuterchange"
+    ],
+    "client": [
+      "com.mtroa.MtrOuterchangeClient"
+    ]
+  },
+  "mixins": [
+    "mtr-outerchange.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "minecraft": "${minecraft_version}",
+    "java": ">=17",
+    "fabric-api": "*",
+    "mtr": ">=4.0.0"
+  }
+}

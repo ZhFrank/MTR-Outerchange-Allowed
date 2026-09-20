@@ -1,0 +1,12 @@
+{
+  "screen.mtr_outerchange.title": "出站閘機 - 出站轉乘",
+  "screen.mtr_outerchange.allow": "允許出站轉乘：",
+  "screen.mtr_outerchange.yes": "是",
+  "screen.mtr_outerchange.no": "否",
+  "screen.mtr_outerchange.minutes": "付費區外最長停留時間：%s 分鐘",
+  "screen.mtr_outerchange.done": "完成",
+  "message.mtr_outerchange.saved": "[出站轉乘] 出站閘機設定已儲存，付費區外最長停留時間：%s 分鐘。",
+  "message.mtr_outerchange.pass_entrance": "[出站轉乘] 已保留原入閘紀錄，直接放行，本次行程繼續。",
+  "message.mtr_outerchange.exit": "[出站轉乘] 行程已暫停，請於 %1$s 分鐘內重新入閘。本次暫不扣費，目前餘額：%2$s。",
+  "message.mtr_outerchange.expired": "[出站轉乘] 逾時未入閘，已扣除本次行程（終點：%2$s）車費 %1$s，目前餘額：%3$s。"
+}
