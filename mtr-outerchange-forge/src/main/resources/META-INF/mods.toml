@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "mtr_outerchange"
+version = "${version}"
+displayName = "MTR Outerchange Allowed"
+authors = "ZFrankXin, WorkBuddy"
+logoFile = "assets/mtr_outerchange/icon.png"
+logoBlur = false
+description = """
+An addon for the Minecraft Transit Railway mod: allows outerchanges through ticket barriers.
+"""
+
+[[dependencies.mtr_outerchange]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mtr_outerchange]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,1.21)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mtr_outerchange]]
+modId = "mtr"
+mandatory = true
+versionRange = "[4.0.0,)"
+ordering = "AFTER"
+side = "BOTH"

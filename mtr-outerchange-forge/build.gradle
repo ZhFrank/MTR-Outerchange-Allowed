@@ -1,0 +1,72 @@
+plugins {
+	id 'java'
+	id 'net.minecraftforge.gradle' version '6.0.54'
+}
+
+version = "${mod_version}+${minecraft_version}"
+group = maven_group
+
+base {
+	archivesName = archives_base_name
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+minecraft {
+	mappings channel: 'official', version: minecraft_version
+}
+
+repositories {
+	mavenCentral()
+}
+
+// Version dependent sources: Compat / CompatClient / Networking live in src/variants/<mc version>.
+sourceSets {
+	main {
+		java {
+			srcDir "src/variants/${minecraft_version}"
+		}
+	}
+}
+
+dependencies {
+	minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+	// MTR is shipped as a plain jar; it is never remapped, so mixins into it use remap = false.
+	compileOnly files(mtr_file)
+}
+
+// Mixins are registered through the jar manifest on Forge.
+jar {
+	manifest {
+		attributes([
+				'MixinConfigs': 'mtr-outerchange.mixins.json'
+		])
+	}
+}
+
+// Forge only registers a mod's assets as a resource pack when the jar carries a pack.mcmeta,
+// so without it the language files are never loaded. The format number is version dependent.
+def PACK_FORMATS = ['1.20': 15, '1.20.1': 15, '1.20.2': 18, '1.20.4': 22]
+def packFormat = PACK_FORMATS[minecraft_version] ?: 15
+
+processResources {
+	filteringCharset = 'UTF-8'
+	inputs.property 'version', version
+	inputs.property 'pack_format', packFormat
+	filesMatching('META-INF/mods.toml') {
+		expand version: version, minecraft_version: minecraft_version
+	}
+	filesMatching('pack.mcmeta') {
+		expand pack_format: packFormat
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.release = 17
+}
